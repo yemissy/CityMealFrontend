@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         opacity: 0.8,
         fontSize: '0.9rem',
-        boxShadow: (2 + 'px ' + 3 + 'px ' + 3 + 'px ' + 2 + 'px ' + ' lightgrey'),
+        boxShadow: ('2px 3px 3px 2px 2px lightgrey'),
     },
     intro: {
         color: '#F4442E', //'#FF6663',//'#FD5200',

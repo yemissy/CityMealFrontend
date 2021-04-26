@@ -4,7 +4,7 @@ import "./App.css";
 import NavBar from "./Components/Navbar/navbar";
 import Footer from "./Components/Footer/footer";
 import UnauthenticatedApp from "./unauthenticatedApp";
-import { get, post } from "./api";
+import { post } from "./api";
 
 const AuthenticatedApp = React.lazy(() =>
   import(/* webpackChunkName: "authenticated-app" */ "./authenticatedApp")
@@ -16,9 +16,6 @@ const BASE_URL = "https://city-meal.herokuapp.com";
 
 function App() {
   const history = useHistory();
-
-  //SET SITES LOCATIONS
-  const [locations, setLocations] = React.useState([]);
 
   //SET FAVORITE SITES
   const [favorites, setFavorites] = React.useState([]); //MOVE TO FAVORITES PAGE
@@ -66,7 +63,7 @@ function App() {
   //FUNCTION MAKING A NEW USER POST REQUEST TO THE DATABASE
   const signUpUser = async () => {
 
-    const data = await post('/register', newUser)
+    await post('/register', newUser)
 
     setNewUser({
       username: "",
@@ -200,7 +197,7 @@ function App() {
   React.useEffect(() => {
     const loggedInUser = localStorage.getItem("user");
     const token = localStorage.getItem("token");
-    console.log(loggedInUser, "line 330");
+
     if (loggedInUser) {
       const userFound = JSON.parse(loggedInUser);
       console.log(userFound, loggedInUser);

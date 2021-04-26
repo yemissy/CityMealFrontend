@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '3%',
     marginLeft: '5%',
     marginRight: '5%',
-    boxShadow: (2 + 'px ' + 3 + 'px ' + 3 + 'px ' + 2 + 'px ' + ' lightgrey'),
+    boxShadow: ('2px 2px 3px 2px lightgrey'),
   },
   fontSize: {
     [theme.breakpoints.down('sm')]: {
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     width: '60em',
     margin: '2% 0 2% 0',
     padding: '2%',
-    boxShadow: (2 + 'px ' + 3 + 'px ' + 3 + 'px ' + 2 + 'px ' + ' lightgrey'),
+    boxShadow: ('2px 3px 3px 2px lightgrey'),
     [theme.breakpoints.up('lg')]: {
       width: '30em',
       padding: '2%',
@@ -105,7 +105,7 @@ function Favorites(props) {
                 <Box style={{ marginBottom: '13%', color: '#325288' }}> {favorite.city} </Box>
                 <Rating />
                 <button className={classes.favBtn} onClick={props.deleteFav} name={favorite.id} >❤️</button>
-                <Button variant="contained" color="primary" className={classes.directionBtn}><a style={{ textDecoration: "none", color: "white" }} href="https://www.google.com/maps" target="_blank">GET DIRECTION</a></Button>
+                <Button variant="contained" color="primary" className={classes.directionBtn}><a style={{ textDecoration: "none", color: "white" }} href="https://www.google.com/maps" target="_blank" rel="noreferrer">GET DIRECTION</a></Button>
               </Box>
             </Box>
           ))}

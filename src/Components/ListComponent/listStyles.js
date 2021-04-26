@@ -1,4 +1,3 @@
-import React from 'react';
 import { makeStyles, createMuiTheme, useMediaQuery } from '@material-ui/core';
 
 
@@ -58,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     width: '25em',
     margin: '1em 0 2em 0',
-    boxShadow: (2 + 'px ' + 3 + 'px ' + 3 + 'px ' + 2 + 'px ' + ' lightgrey'),
+    boxShadow: ('2px 3px 3px 2px lightgrey'),
     [themes2.breakpoints.up('tablet')]: {
       width: '22em',
       margin: '1em 1em 1em 1em',

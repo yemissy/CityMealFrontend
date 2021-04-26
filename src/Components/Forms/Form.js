@@ -1,7 +1,6 @@
 import React from 'react';
-import { Modal, TextField, Button, useMediaQuery } from '@material-ui/core';
-import { themes, themes2, modalStyle, formStyle } from './formStyle';
-import ShowSuccess from '../Others/successful';
+import { Modal, TextField, Button } from '@material-ui/core';
+import {modalStyle, formStyle } from './formStyle';
 
 
 
@@ -15,7 +14,7 @@ function Form(props) {
 
 
     //SET SIGN UP/ SIGN IN MODAL STATE
-    const [openModal, setOpenModal] = React.useState(false)
+    const openModal = (false)
 
     return (
         <div>

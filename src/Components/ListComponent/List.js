@@ -1,10 +1,9 @@
 import React from 'react';
 import Filter from './Filter'
-import TextField from '@material-ui/core/TextField';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Rating from './Rating';
-import {useStyles, themes2, useMediaQuery} from './listStyles';
+import {useStyles} from './listStyles';
 import {get} from '../../api';
 
 
@@ -32,7 +31,6 @@ function List(props) {
     <div>
       <div className={classes.filterDiv}>
         <Filter />
-        {/* <TextField id="standard-search" label="zipcode" type="search" /> */}
       </div>
       <div className={classes.listWrap}>
         {locations.map(location => (
@@ -43,7 +41,7 @@ function List(props) {
               <Box style={{ marginBottom: '13%', color: '#325288' }}>{location.city}</Box>
               <Rating />
               <button className={classes.favBtn} onClick={props.addFav} name={location.id}>❤️</button>
-              <Button variant="contained" color="primary" className={classes.directionBtn}><a style={{ textDecoration: "none", color: "white" }} href={`https://www.google.com/maps/place/` + location.siteAddress.split(" ").join("+")} target="_blank">GET DIRECTION</a></Button>
+              <Button variant="contained" color="primary" className={classes.directionBtn}><a style={{ textDecoration: "none", color: "white" }} href={`https://www.google.com/maps/place/` + location.siteAddress.split(" ").join("+")} target="_blank" rel="noreferrer">GET DIRECTION</a></Button>
             </Box>
           </Box>
         ))}

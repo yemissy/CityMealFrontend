@@ -5,7 +5,7 @@ import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import { FaUser } from 'react-icons/fa'
 import { FaMapMarkedAlt } from 'react-icons/fa'
-import {get, put} from '../../api'
+import {put} from '../../api'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '3%',
         marginLeft: '5%',
         marginRight: '5%',
-        boxShadow: (2 + 'px ' + 3 + 'px ' + 3 + 'px ' + 2 + 'px ' + ' lightgrey'),
+        boxShadow: ('2px 3px 3px 2px lightgrey'),
         color: '#325288',
         [theme.breakpoints.down('sm')]: {
             marginTop: '5%',
@@ -89,7 +89,7 @@ function Profile(props) {
 
     const [currentZipcode, setCurrentZipcode] = React.useState('true')
     const [currentBtn, setCurrentBtn] = React.useState('EDIT')
-    const [submitClicked, setSubmitClicked] = React.useState(false)
+
 
     const [updatedUser, setUpdatedUser] = React.useState({
         username: props.userSignedIn.currentUser.username,
